@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+    var karsilama = ViewBag.Saat >= 12 ? "İyi günler" : "Günaydın";
+}
+
+<!DOCTYPE html>
+@model IEnumerable<LifeCycleOfMVC.Models.Urun>
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="text-center">
+
+        @*@if (ViewBag.Saat >= 12)
+            {
+                <p>İyi Günler</p>
+            }
+            else
+            {
+                <p>Günaydın</p>
+            }*@
+
+        <p>@karsilama</p>
+        @*<ul>
+                @foreach (var urun in Model)
+                {
+                    <li>@urun.Ad isimli ürünün fiyatı @urun.Fiyat TL'dir</li>
+                }
+            </ul>*@
+
+        <p>Bir toplantı yapıyoruz :) Sen de gelmek ister misin? Davetiyeyi doldurmak için butonu tıkla</p>
+        <p> @Html.ActionLink("Yanıt ver", "Yanit", null, new { @class = "btn btn-success" }) </p>
+
+    </div>
+
+</body>
+</html>

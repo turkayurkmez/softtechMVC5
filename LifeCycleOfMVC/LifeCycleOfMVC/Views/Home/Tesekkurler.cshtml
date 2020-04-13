@@ -1,0 +1,26 @@
+﻿@model LifeCycleOfMVC.Models.ZiyaretciYaniti 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h3>Teşekkürler @Model.Ad</h3>
+        @if (Model.KatilacakMi == true)
+        {
+            <p>Bu sevindik! Orada görüşürüz</p>
+        }
+        else
+        {
+            <p>Üzüldük. Neyse; bir dahaki sefere.... </p>
+        }
+    </div>
+</body>
+</html>

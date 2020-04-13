@@ -1,0 +1,66 @@
+﻿@model LifeCycleOfMVC.Models.ZiyaretciYaniti
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .input-validation-error {
+            background-color: yellow;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Yanit</title>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">Yanıt Formu</div>
+        <div class="card-body">
+            <!-- <form action="" method="post">
+
+    </form>-->
+            @Html.ValidationSummary()
+
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    Adınız
+                    @Html.TextBoxFor(x => x.Ad,new {@class="form-control"})
+                    @Html.ValidationMessageFor(x => x.Ad)
+                </div>
+                <div class="form-group">
+                    Eposta:
+                    @Html.TextBoxFor(x => x.Eposta,new {@class="form-control"})
+                    @Html.ValidationMessageFor(x => x.Eposta)
+                </div>
+                <div class="form-group">
+                    Telefon
+                    @Html.TextBoxFor(x => x.Telefon,new {@class="form-control"})
+
+                </div>
+                <div class="form-group">
+                    Katılım Durumu
+                    @Html.DropDownListFor(x => x.KatilacakMi, new[] {
+                                                                new SelectListItem { Text ="Evet, katılacağım.", Value=bool.TrueString},
+                                                                new SelectListItem { Text ="Hayır, gelemiyorum.", Value=bool.FalseString}
+                                                                 }, "Lütfen Seçim yapınız",new {@class="form-control"})
+                    @Html.ValidationMessageFor(x => x.KatilacakMi)
+                </div>
+                <div class="text-center">
+                    <input type="submit" value="Yanıtı Gönder" class="btn btn-primary" />
+                </div>
+               
+
+
+            }
+        </div>
+
+    </div>
+</body>
+</html>

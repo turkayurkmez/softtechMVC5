@@ -1,0 +1,6 @@
+C:\Users\turka\source\repos\Kurumsal\Softtech\OverViewCSharp\OverViewCSharp\bin\Debug\OverViewCSharp.exe.config
+C:\Users\turka\source\repos\Kurumsal\Softtech\OverViewCSharp\OverViewCSharp\bin\Debug\OverViewCSharp.exe
+C:\Users\turka\source\repos\Kurumsal\Softtech\OverViewCSharp\OverViewCSharp\bin\Debug\OverViewCSharp.pdb
+C:\Users\turka\source\repos\Kurumsal\Softtech\OverViewCSharp\OverViewCSharp\obj\Debug\OverViewCSharp.csprojAssemblyReference.cache
+C:\Users\turka\source\repos\Kurumsal\Softtech\OverViewCSharp\OverViewCSharp\obj\Debug\OverViewCSharp.exe
+C:\Users\turka\source\repos\Kurumsal\Softtech\OverViewCSharp\OverViewCSharp\obj\Debug\OverViewCSharp.pdb

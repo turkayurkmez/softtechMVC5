@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SimpleStoreApplication.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    int count = 0;
+}
+
+<h2>Index</h2>
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+
+            if (count != 0 && count %4 ==0)
+            {
+                @:</div>
+                @:<div class="row">
+            }
+            <div class="col-3">
+                <div class="card" style="width:18rem;">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" />
+                    <div class="card-body">
+                        <p>@item.ProductName</p>
+                        <p>@item.Price</p>
+                        <p>@item.Description</p>
+                        <button class="btn btn-danger">Sepete Ekle</button>
+                    </div>
+                </div>
+            </div>
+            count++;
+        }
+    </div>
+
+
+</div>
+
+
+
