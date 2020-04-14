@@ -1,41 +1,58 @@
-﻿@model IEnumerable<SimpleStoreApplication.Models.Product>
+﻿@model  SimpleStoreApplication.Models.ProductViewModel
 
 @{
     ViewBag.Title = "Index";
     int count = 0;
 }
 
-<h2>Index</h2>
+<h2>Index </h2>
+<h3>Sayfa: @ViewBag.Page</h3>
 
 
 <div class="container">
     <div class="row">
 
-        @foreach (var item in Model)
+        @foreach (var item in Model.Products)
         {
 
-            if (count != 0 && count %4 ==0)
+            if (count != 0 && count % 4 == 0)
             {
-                @:</div>
-                @:<div class="row">
+            @:</div>
+            @:<div class="row">
             }
-            <div class="col-3">
-                <div class="card" style="width:18rem;">
-                    <img class="card-img-top" src="https://via.placeholder.com/150" />
-                    <div class="card-body">
-                        <p>@item.ProductName</p>
-                        <p>@item.Price</p>
-                        <p>@item.Description</p>
-                        <button class="btn btn-danger">Sepete Ekle</button>
-                    </div>
-                </div>
-            </div>
+
+            @Html.Partial("_ProductSummary", item)
+
             count++;
         }
     </div>
 
+    @* @Html.Paginate(x=>) *@
+    @Html.Pagination(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+
+
+    <!--
+    <div class="pagination">
+        @for (int i = 1; i <= Model.PageInfo.TotalPages; i++)
+        {
+            <a href="/Home/Index?page=@i">@i</a>
+        }
+    </div>
+        -->
+
 
 </div>
-
+@section scripts{
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <script src="~/Scripts/alertify.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.card-body').on('click', 'button', function () {
+                var kitapAdi = $(this).data('productname');
+                alertify.success(kitapAdi + " sepete eklendi");
+            });
+        });
+    </script>
+}
 
 

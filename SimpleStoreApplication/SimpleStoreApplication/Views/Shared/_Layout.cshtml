@@ -46,8 +46,10 @@
 
     <div class="container body-content">
         <div class="row">
-            <div class="col-md-2">MENÜ</div>
-            <div class="col-md-10">  @RenderBody()</div>
+            <div class="col-md-2">
+                @Html.Action("Menu","Navigation")
+            </div>
+            <div class="col-md-10">@RenderBody()</div>
         </div>
 
         <hr />

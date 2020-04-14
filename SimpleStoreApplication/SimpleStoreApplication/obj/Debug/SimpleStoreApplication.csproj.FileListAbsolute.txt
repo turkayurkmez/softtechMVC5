@@ -51,6 +51,8 @@ C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStore
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\roslyn\VBCSCompiler.exe
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Antlr3.Runtime.dll
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\EntityFramework.dll
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\EntityFramework.SqlServer.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Newtonsoft.Json.dll
@@ -63,6 +65,8 @@ C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStore
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\System.Web.WebPages.Razor.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\WebGrease.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Antlr3.Runtime.pdb
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\EntityFramework.xml
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\EntityFramework.SqlServer.xml
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Newtonsoft.Json.xml
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\System.Web.Helpers.xml
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\System.Web.Mvc.xml
@@ -72,7 +76,9 @@ C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStore
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\System.Web.WebPages.Deployment.xml
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\System.Web.WebPages.Razor.xml
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csprojAssemblyReference.cache
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V1.resources
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csproj.GenerateResource.cache
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csproj.CopyComplete
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.pdb
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csprojAssemblyReference.cache
