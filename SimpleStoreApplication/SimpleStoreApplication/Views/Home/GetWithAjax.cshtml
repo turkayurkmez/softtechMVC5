@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "GetWithAjax";
+}
+<style>
+    #products{
+        display:none;
+    }
+</style>
+<h2>GetWithAjax</h2>
+<button id="getir">Ürünleri Getir</button>
+<ul id="products">
+</ul>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#getir').on('click', function () {
+                $.ajax(
+                    {
+                        url: "/Home/GetProducts",
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            $.each(data, function (index, element) {
+                                var li = $('<li>' + element.ProductName + ' ' + element.Price + '</li>');
+                                $('#products').append(li);
+                            });
+
+                            $('#products').slideDown('slow');
+
+                        },
+                        error: function (err) {
+                             console.log(err);
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+}
+
+
+

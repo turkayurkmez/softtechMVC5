@@ -1,0 +1,38 @@
+﻿@model SimpleStoreApplication.Models.CartIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+            <th>Ara Toplam</th> 
+        </tr>
+        
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ShoppingCart.Products)
+        {
+        <tr>
+            <td class="text-center">@item.Product.ProductName</td>
+            <td class="text-left">@item.Quantity</td>
+            <td class="text-right">@item.Product.Price</td>
+            <td class="text-right">@((item.Quantity * item.Product.Price).ToString("C2"))</td>
+
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Toplam Ücret</td>
+            <td class="text-right">@Model.ShoppingCart.GetTotalValue().ToString("C2")</td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-center">
+    <a href="@Model.ReturnUrl" class="btn btn-primary">Alışverişe devam et :)</a>
+</div>

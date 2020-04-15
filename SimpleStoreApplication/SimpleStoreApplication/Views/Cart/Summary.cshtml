@@ -1,0 +1,9 @@
+﻿@model SimpleStoreApplication.Models.ShoppingCart
+<div class="navbar bg-light ">
+    @Html.ActionLink("Sepetiniz","Index","Cart",new { returnUrl= Request.Url.PathAndQuery }, new { @class="btn btn-default" })
+
+</div>
+<div class="navbar-text bg-dark">
+    @Model.Products.Count adet ürün var
+    Toplam Fiyatı: @Model.GetTotalValue().ToString("C0")    
+</div>

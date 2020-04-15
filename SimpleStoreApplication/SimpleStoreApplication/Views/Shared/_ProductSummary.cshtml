@@ -1,0 +1,23 @@
+﻿@model SimpleStoreApplication.Models.Product
+
+<div class="col-3">
+    <div class="card" style="width:18rem;">
+        <img class="card-img-top" src="https://via.placeholder.com/150" />
+        <div class="card-body">
+            <p>@Model.ProductName</p>
+            <p>@Model.Price</p>
+            <p>@Model.Description</p>
+            @*
+                @using (Html.BeginForm("AddToCart", "Cart"))
+                {
+                    @Html.HiddenFor(x=>x.ProductId)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <button type="submit" class="btn btn-danger" data-productName="@Model.ProductName">Sepete Ekle</button>
+                }
+            *@
+            <input type="hidden" value="@Request.Url.PathAndQuery" id="returnUrl" name="returnUrl" />
+            <button type="submit"  class="btn btn-danger addToBasket" data-productName="@Model.ProductName" data-id="@Model.ProductId">Sepete Ekle</button>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<SimpleStoreApplication.Models.Category>
+@Html.ActionLink("Ana Sayfa","Index","Home",null,new { @class="btn btn-primary btn-block btn-lg"  })
+@foreach (var category in Model)
+{
+    @Html.RouteLink(category.Name, new { controller="Home", action="Index", categoryName=category.Name,page="1" },
+    new { @class="btn btn-default btn-block btn-lg" + (category.Name == ViewBag.SelectedCategory ? " btn-danger":"")  } )
+
+}
+
