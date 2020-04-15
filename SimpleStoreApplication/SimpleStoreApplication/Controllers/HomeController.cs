@@ -33,7 +33,7 @@ namespace SimpleStoreApplication.Controllers
                              .Take(pageSize);
 
             PageInfo pageInfo = new PageInfo { TotalItems = count, ItemsPerPage = pageSize, CurrentPage = page };
-            ProductViewModel productViewModel = new ProductViewModel { PageInfo = pageInfo, Products = products.ToList() };
+            ProductViewModel productViewModel = new ProductViewModel { PageInfo = pageInfo, Products = products.ToList(), CategoryName=categoryName };
 
             return View(productViewModel);
         }

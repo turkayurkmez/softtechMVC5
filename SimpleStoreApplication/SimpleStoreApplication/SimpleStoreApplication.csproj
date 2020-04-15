@@ -257,6 +257,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Data\SimpleStoreDbContext.cs" />
@@ -264,16 +266,28 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelpers\PagingHtmlHelper.cs" />
+    <Compile Include="Infrastructure\CartModelBinder.cs" />
     <Compile Include="Migrations\202004140741183_V1.cs" />
     <Compile Include="Migrations\202004140741183_V1.designer.cs">
       <DependentUpon>202004140741183_V1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004151243071_V2.cs" />
+    <Compile Include="Migrations\202004151243071_V2.designer.cs">
+      <DependentUpon>202004151243071_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004151333164_V3.cs" />
+    <Compile Include="Migrations\202004151333164_V3.designer.cs">
+      <DependentUpon>202004151333164_V3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CartIndexViewModel.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\FakeProductRepository.cs" />
     <Compile Include="Models\PageInfo.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductInBasket.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +301,11 @@
     <Content Include="Views\Shared\_ProductSummary.cshtml" />
     <Content Include="Views\Navigation\Menu.cshtml" />
     <Content Include="Views\Home\GetWithAjax.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Summary.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -306,6 +325,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004140741183_V1.resx">
       <DependentUpon>202004140741183_V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004151243071_V2.resx">
+      <DependentUpon>202004151243071_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004151333164_V3.resx">
+      <DependentUpon>202004151333164_V3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -82,3 +82,5 @@ C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStore
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.pdb
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csprojAssemblyReference.cache
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V2.resources
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V3.resources

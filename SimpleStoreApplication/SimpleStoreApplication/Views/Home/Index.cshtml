@@ -28,7 +28,7 @@
     </div>
 
     @* @Html.Paginate(x=>) *@
-    @Html.Pagination(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+    @Html.Pagination(Model.PageInfo, x => Url.Action("Index", new { page = x, categoryName = Model.CategoryName }))
 
 
     <!--
@@ -49,7 +49,20 @@
         $(document).ready(function () {
             $('.card-body').on('click', 'button', function () {
                 var kitapAdi = $(this).data('productname');
-                alertify.success(kitapAdi + " sepete eklendi");
+                var id = $(this).data('id');
+                var returnUrl = $('#returnUrl').val();
+                $.ajax({
+                    url: '/Cart/AddToCart?productId=' + id + '&returnUrl=' + returnUrl,
+                    type: 'GET',
+                    success: function (data) {
+                        console.log(data);
+                        alertify.success(kitapAdi + " sepete eklendi");
+                    },
+                    error: function (err) {
+
+                    }
+                });
+
             });
         });
     </script>
