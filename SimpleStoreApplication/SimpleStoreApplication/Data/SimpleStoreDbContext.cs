@@ -11,8 +11,10 @@ namespace SimpleStoreApplication.Data
     {
         public SimpleStoreDbContext():base("name=SimpleStoreDbContext")
         {
-
+            this.Configuration.LazyLoadingEnabled = false;    
         }
+
+        
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
 

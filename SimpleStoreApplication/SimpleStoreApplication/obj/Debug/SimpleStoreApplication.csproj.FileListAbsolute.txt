@@ -77,10 +77,10 @@ C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStore
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\System.Web.WebPages.Razor.xml
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V1.resources
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V2.resources
+C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V3.resources
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csproj.GenerateResource.cache
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csproj.CopyComplete
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.dll
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.pdb
 C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.csprojAssemblyReference.cache
-C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V2.resources
-C:\Users\turka\source\repos\Kurumsal\Softtech\SimpleStoreApplication\SimpleStoreApplication\obj\Debug\SimpleStoreApplication.Migrations.V3.resources

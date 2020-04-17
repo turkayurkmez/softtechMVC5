@@ -22,7 +22,7 @@ namespace SimpleStoreApplication.Models
         public decimal Price { get; set; }
 
         public int? CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
         [DataType(DataType.Date)]
         [Display(Name = "Oluşturulma Tarihi")]
         public DateTime? CreatedDate { get; set; }

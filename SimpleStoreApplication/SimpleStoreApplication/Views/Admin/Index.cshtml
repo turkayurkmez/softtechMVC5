@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
 <h2>Index</h2>
 @Html.ActionLink("Ürün Ekle", "Create")
 <table class="table table-striped table-hover">
@@ -22,10 +23,76 @@
             <td>@Html.DisplayFor(x => item.Price)</td>
             <td>@Html.DisplayFor(x => item.Category.Name)</td>
             <td>
-                @Html.ActionLink("Güncelle", "Edit", new { id = item.ProductId }, new { @class="btn btn-success" }) |
-                @Html.ActionLink("Detaylar", "Details", new { id = item.ProductId }, new { @class="btn btn-primary" }) |
-                @Html.ActionLink("Sil", "Delete", new { id = item.ProductId }, new { @class="btn btn-danger" })
+                <button class="btn btn-success editButton" data-id="@item.ProductId">Güncelle</button>
+                @Html.ActionLink("Detaylar", "Details", new { id = item.ProductId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.ProductId }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }
 </table>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="editData">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <input type="button" value="Save" id="guncelle" class="btn btn-success save" />
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var id;
+        $('.editButton').on('click', function () {
+            id = $(this).data('id');
+            console.log(id);
+            $.get("/Admin/Edit/" + id, function (data) {
+                $('#editData').html(data);
+                $('#exampleModal').modal('show');
+            });
+        });
+
+        $('.save').on('click', function () {
+            console.log("güncelle yakalando")
+            let gidecekData = {
+                productid: id,
+                productname: $('#ProductName').val(),
+                description: $('#Description').val(),
+                price: $('#Price').val(),
+                categoryId: $('#CategoryId').val(),
+                createddate: $('#CreatedDate').val()
+            };
+            var data = JSON.stringify(gidecekData);
+            $.ajax({
+                //
+                url: '/Admin/Edit',
+                type: 'POST',
+                data: data,
+                dataType: 'json',
+                contentType: 'application/json',
+                success: function (data) {
+                    $('#exampleModal').modal('hide');
+                    alertify.success(data);
+                    location = location;
+                },
+                error: function (err) {
+                    alertify.error(err);
+                }
+            });
+            console.log(gidecekData);
+            console.log(data);
+        });
+    });
+</script>
