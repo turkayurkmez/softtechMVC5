@@ -1,0 +1,114 @@
+﻿@model IEnumerable<usingWebGrid.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    WebGrid webGrid = new WebGrid(source: Model, canPage: true, canSort: true, defaultSort: "CompanyName");
+}
+
+
+<h2>Index</h2>
+@webGrid.GetHtml(
+    tableStyle: "table table-hover",
+    htmlAttributes: new { @id = "webgrid" },
+    columns: webGrid.Columns
+    (
+        webGrid.Column
+        (
+            header: "Müşteri Id",
+            format: @<span class="label label-info customerid">@item.CustomerId</span>
+),
+webGrid.Column
+(
+header: "Müşteri Adı",
+format: @<span>
+                        <span class="label label-success">@item.CompanyName</span>
+                        <input type="text" class="form-control companyname text" value="@item.CompanyName" style="display:none" />
+                    </span>
+),
+webGrid.Column
+(
+header: "Adres",
+format: @<span>
+                                <span class="label label-info">@item.Address</span>
+                                <input type="text" class="form-control address text" value="@item.Address" style="display:none" />
+                            </span>
+),
+webGrid.Column
+(
+format: @<span>
+                                        <button class="btn btn-default edit">Güncelle</button>
+                                        <button class="btn btn-danger update" style="display:none">Kaydet</button>
+                                        <button class="btn btn-primary cancel" style="display:none">İptal</button>
+                                        <button class="btn btn-warning delete">Sil</button>
+                                    </span>
+                 )
+             )
+         )
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#webgrid tr').on('click', '.edit', function () {
+            cancelEditPosition();
+            var tr = $(this).closest('tr');
+            $('td', tr).each(function () {
+                $(this).find('.text').show();
+                $(this).find('.label').hide();
+            });
+
+            tr.find('.update').show();
+            tr.find('.cancel').show();
+            tr.find('.delete').hide();
+            $(this).hide();
+        });
+
+        function cancelEditPosition() {
+            // TODO: Butonları değiştir
+            console.log('testt');
+            $('tr', '#webgrid').each(function () {
+                clearRow($(this));
+
+            });
+        }
+
+        function clearRow(tr) {
+            $('td', tr).each(function () {
+                $(this).find('.text').hide();
+                $(this).find('.label').hide();
+            });
+            $(this).find('.delete').show();
+            $(this).find('.edit').show();
+            $(this).find('.update').hide();
+            $(this).find('.cancel').hide();
+        }
+
+        $('#webgrid tr').on('click', '.update', function () {
+            var tr = $(this).closest('tr');
+            //clearRow(tr);
+            var customerId = $(tr).find('.customerid').html();
+            var companyname = $(tr).find('.companyname').val();
+            var address = $(tr).find('.address').val();
+            var jsObject = {
+                CustomerId: customerId,
+                CompanyName: companyname,
+                Address: address
+            }
+            var jsonString = JSON.stringify(jsObject);
+            console.log(jsonString);
+            $.ajax({
+                url: '/Home/Update',
+                type: 'POST',
+                data: jsonString,
+                contentType: "application/json; charset=UTF-8",
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data.CompanyName + " güncellendi");
+                    clearRow(tr);
+                }
+            });
+        });
+
+
+
+    });
+</script>

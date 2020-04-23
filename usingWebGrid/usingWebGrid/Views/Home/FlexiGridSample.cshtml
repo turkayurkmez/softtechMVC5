@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "FlexiGridSample";
+}
+<link href="~/Content/flexigrid/flexigrid.css" rel="stylesheet" />
+<h2>FlexiGridSample</h2>
+<table id="flexiGrid" style="display:none;"></table>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/flexigrid.js"></script>
+<script>
+    $('#flexiGrid').flexigrid({
+        url: '/Home/GetCustomers',
+        dataType: 'json',
+
+        colModel: [
+            {
+                display: 'Id',
+                name: 'CustomerID',
+                width: 100,
+                align: 'center'
+            },
+            {
+                display: 'Şirket Adı',
+                name: 'CompanyName',
+                width: 100,
+                align: 'left'
+            },
+            {
+                display: 'Adresi',
+                name: 'Address',
+                width: 100,
+                align: 'right'
+            }
+
+        ],
+        searchitems: [
+            {
+
+                display: 'ID',
+                name:'CustomerID'
+            },
+             {
+
+                display: 'Şirket Adı',
+                 name: 'CompanyName',
+                 isdefault: true
+            }
+        ],
+        sortname: 'CustomerID',
+        sortorder: 'asc',
+        usepager: true,
+        useRp: true,
+        title: 'Müşteriler',
+        height: 'auto',
+        width: 550,
+        rp: 15,
+        striped: true,
+        showToggleBtn: true
+       
+    })
+</script>
